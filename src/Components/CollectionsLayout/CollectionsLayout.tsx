@@ -1,11 +1,11 @@
 import React from "react";
 
-import { CollectionsTabListEnum } from "../../Constants/collections";
-
 import { Header } from "../Header/Header";
 
 import "./styles.css";
-
+import { LeftPanel } from "../LeftPanel/LeftPanel";
+import { Body } from "../Body/Body";
+import { CollectionsTabListEnum } from "../../Constants/collections";
 const CollectionsLayout = (): React.ReactElement => {
   const [selectedTab, setSelectedTab] = React.useState<string>(
     CollectionsTabListEnum.All
@@ -15,7 +15,8 @@ const CollectionsLayout = (): React.ReactElement => {
     <div className={"layout-container"}>
       <Header selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       <div className={"layout-body-container"}>
-        <>left panel body</>
+        <LeftPanel selectedTab={selectedTab} />
+        <Body />
       </div>
     </div>
   );
