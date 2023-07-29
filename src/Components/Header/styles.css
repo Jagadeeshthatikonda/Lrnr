@@ -1,0 +1,85 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 98px;
+  max-height: 98px;
+  width: 100%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  padding: 30px 30px 0px 0px;
+}
+.header-top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 30px;
+}
+.invite-team-member {
+  font-family: sans-serif;
+  font-weight: 200;
+  margin-bottom: 0px;
+  margin-left: 3px;
+  color: #717679;
+}
+
+.header-right-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.status-container {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: green;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.stage {
+  background-color: red;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: #ffffff;
+  border-radius: 10px;
+  padding: 2px 1px 14px 6px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 23px;
+  width: 31px;
+  height: 11px;
+}
+
+.stage-text {
+  color: white;
+  font-size: 9px;
+  margin: 0px;
+}
+
+.tabs-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.each-tab-item {
+  cursor: pointer;
+  padding: 0px 15px 0px 15px;
+  margin-bottom: 0px;
+  padding-bottom: 8px;
+}
+
+.selected-tab-border-styles {
+  border-bottom: 2px solid #ecb8bd;
+}
+
+.header-bottom-section {
+  margin-left: 15px;
+}
