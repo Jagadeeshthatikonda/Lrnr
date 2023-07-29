@@ -1,7 +1,8 @@
-import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSolidUserPlus } from "react-icons/bi";
+import React from "react";
 
+import { Avatar } from "../../DesignSystem/Avatar/Avatar";
 import { collectionsTabList } from "../../store/fixtures/collectionsTabsFixture";
 
 import "./styles.css";
@@ -43,7 +44,7 @@ export const Header = (props: HeaderProps): React.ReactElement => {
         <div className={"header-right-section"}>
           {renderInvitePeople()}
           <p className={"invite-team-member"}>INVITE TEAM MEMBER</p>
-          <p>avatar</p>
+          <Avatar />
         </div>
       </div>
       <div className={"header-bottom-section"}>{renderTabsList()}</div>
