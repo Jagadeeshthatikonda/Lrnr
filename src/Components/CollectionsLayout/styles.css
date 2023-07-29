@@ -1,0 +1,18 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100vw;
+  height: 100vh;
+}
+
+.layout-body-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+  width: 100%;
+}
