@@ -1,11 +1,15 @@
 import React from "react";
+
 import { CollectionsTabListEnum } from "../../Constants/collections";
+
 import { Collections } from "../Collections/Collections";
+
 import "./styles.css";
 
 interface LeftPanelProps {
   selectedTab: string;
 }
+
 export const LeftPanel = (props: LeftPanelProps): React.ReactElement => {
   const { selectedTab } = props;
 

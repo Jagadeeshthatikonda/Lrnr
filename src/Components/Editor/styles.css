@@ -1,0 +1,28 @@
+/* TODO: Need to refactor all these with tailwind css */
+
+.custom-class-name {
+  position: relative !important;
+}
+
+.lexical-editor-class-name {
+  border-bottom: 1px solid #c8c8c8;
+  border-radius: 10px;
+  height: 100px;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+  height: auto;
+  padding: 16px;
+}
+
+.lexical-editor-class-name::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lexical-editor-class-name::-webkit-scrollbar-track {
+  background: #c8c8c8;
+}
+
+.lexical-editor-class-name:focus-visible {
+  border-bottom: none;
+  outline: 2px solid #c8c8c8;
+}

@@ -5,16 +5,18 @@ import React from "react";
 import { Avatar } from "../../DesignSystem/Avatar/Avatar";
 import { collectionsTabList } from "../../store/fixtures/collectionsTabsFixture";
 
+import { ProfileDetails } from "../ProfileDetails/ProfileDetails";
+
 import "./styles.css";
 
 interface HeaderProps {
   selectedTab: string;
   setSelectedTab: (tab: string) => void;
 }
+
 export const Header = (props: HeaderProps): React.ReactElement => {
   const { selectedTab, setSelectedTab } = props;
   const renderIcon = (): React.ReactElement => <GiHamburgerMenu />;
-
   const renderInvitePeople = (): React.ReactElement => <BiSolidUserPlus />;
 
   const renderTabsList = (): React.ReactElement => {
@@ -37,6 +39,7 @@ export const Header = (props: HeaderProps): React.ReactElement => {
       </div>
     );
   };
+
   return (
     <div className="header-container">
       <div className={"header-top-container"}>
@@ -44,7 +47,9 @@ export const Header = (props: HeaderProps): React.ReactElement => {
         <div className={"header-right-section"}>
           {renderInvitePeople()}
           <p className={"invite-team-member"}>INVITE TEAM MEMBER</p>
-          <Avatar />
+          <ProfileDetails>
+            <Avatar />
+          </ProfileDetails>
         </div>
       </div>
       <div className={"header-bottom-section"}>{renderTabsList()}</div>

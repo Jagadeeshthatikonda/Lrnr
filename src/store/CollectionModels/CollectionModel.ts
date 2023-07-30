@@ -1,4 +1,4 @@
-import { action, makeObservable, observable, computed } from "mobx";
+import { action, makeObservable, observable } from "mobx";
 
 interface CollectionModelType {
   id: string;
@@ -10,31 +10,17 @@ export class CollectionModel {
   id!: string;
   nodeType!: string;
   collections!: Array<CollectionModel>;
-  collectionsList!: CollectionModelType[];
 
   constructor(id: string, nodeType: string) {
     makeObservable(this, {
       id: observable,
       nodeType: observable,
       collections: observable,
-      collectionsList: observable,
-      addSubCollections: action,
-      setId: action,
       getAndCreateCollectionModel: action,
-      getCollectionModel: computed,
     });
     this.id = id;
     this.nodeType = nodeType;
     this.collections = [];
-    this.collectionsList = [];
-  }
-
-  addSubCollections(container: CollectionModel) {
-    this.collections.push(container);
-  }
-
-  setId(id: string) {
-    this.id = id;
   }
 
   getAndCreateCollectionModel(
@@ -50,12 +36,5 @@ export class CollectionModel {
       }
     });
     return collectionModel;
-  }
-
-  get getCollectionModel(): CollectionModel {
-    return this.getAndCreateCollectionModel(
-      this.collectionsList,
-      new CollectionModel("DFIN", "CONTAINER_NODE_TYPE")
-    );
   }
 }

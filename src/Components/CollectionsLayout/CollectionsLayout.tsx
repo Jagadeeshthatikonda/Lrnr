@@ -1,11 +1,15 @@
 import React from "react";
 
-import { Header } from "../Header/Header";
+import { CollectionsTabListEnum } from "../../Constants/collections";
 
-import "./styles.css";
+import { Header } from "../Header/Header";
 import { LeftPanel } from "../LeftPanel/LeftPanel";
 import { Body } from "../Body/Body";
-import { CollectionsTabListEnum } from "../../Constants/collections";
+
+import "./styles.css";
+
+//TODO: Need to refactor with tailwind css
+
 const CollectionsLayout = (): React.ReactElement => {
   const [selectedTab, setSelectedTab] = React.useState<string>(
     CollectionsTabListEnum.All

@@ -1,0 +1,25 @@
+/* TODO: Need to refactor all these with tailwind css */
+
+.floating-plugin-container {
+  background-color: black;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.floating-plugin-container[style] {
+  position: absolute !important;
+}
+
+.float-icon-class-name {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+}
+
+.edit-link-class-name {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+  border: none;
+  padding: 0px 4px 0px 4px;
+  outline: none;
+}

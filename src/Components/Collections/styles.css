@@ -1,0 +1,133 @@
+/* TODO: Need to refactor all these with tailwind css */
+
+.tree-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.collections-list {
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0px;
+}
+
+.rotate {
+  -moz-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+.rotate.down {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.chevron-icon-color {
+  color: #979797;
+  font-size: 10px;
+  margin-right: 4px;
+}
+
+.content-with-icon {
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: circular;
+  font-size: 14px;
+}
+
+.content-with-icon:hover {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+}
+
+.add-node-icon-styles {
+  margin-left: 132px;
+  color: #cc7d8b;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.sticky-class-name {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.selected > .content-with-icon {
+  background-color: #f5f5f5;
+}
+.selected > .lead-node-selected-styles {
+  border-left: 4px solid red;
+}
+
+.lead-node-selected-styles {
+  font-size: 16px;
+  font-family: auto;
+  text-transform: capitalize;
+}
+/*collapsable*/
+
+.hide-class-name {
+  transition: opacity 200ms, display 200ms;
+  display: none;
+  opacity: 0;
+}
+
+#treeContainer
+  > .collections-list
+  > .each-collection-list
+  > .collections-list {
+  max-height: calc(100vh - 130px);
+  min-height: calc(100vh - 130px);
+  overflow: auto;
+  padding-bottom: 20px;
+}
+
+#treeContainer
+  > .collections-list
+  > .each-collection-list
+  > .collections-list::-webkit-scrollbar {
+  width: 8px;
+}
+/* 
+/* Track */
+#treeContainer
+  > .collections-list
+  > .each-collection-list
+  > .collections-list::-webkit-scrollbar-track {
+  background: #c8c8c8;
+}
+
+/* Handle */
+#treeContainer
+  > .collections-list
+  > .each-collection-list
+  > .collections-list::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+}
+
+.root-node-class-name {
+  padding-left: 15px !important;
+  color: #b6b6b6;
+  font-size: 15px;
+}
+
+.leaf-node {
+  display: none;
+}
+
+.leaf-node-visibility {
+  display: inline !important;
+  font-size: small;
+  margin-left: 20px;
+  font-weight: 100;
+  color: #737373;
+}
+.add-node-plus-visibility {
+  cursor: not-allowed;
+  pointer-events: none;
+}

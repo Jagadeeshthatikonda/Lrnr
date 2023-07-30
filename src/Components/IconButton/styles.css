@@ -1,0 +1,35 @@
+/* TODO: Need to refactor all these with tailwind css */
+
+.floating-plugin-container {
+  background-color: black;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.floating-plugin-container[style] {
+  position: absolute !important;
+}
+
+.float-icon-class-name {
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  margin: 0px 4px 0px 4px;
+  cursor: pointer;
+}
+
+.icon-class-name {
+  background-color: transparent;
+  border: none;
+  margin: 0px 4px 0px 4px;
+  cursor: pointer;
+}
+
+.check-icon-class-name {
+  background-color: transparent;
+  border: none;
+  margin: 0px 4px 0px 4px;
+  cursor: pointer;
+  outline: none;
+}
