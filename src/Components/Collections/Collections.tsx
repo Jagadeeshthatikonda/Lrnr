@@ -3,7 +3,10 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 import { Tooltip } from "react-tooltip";
 
-import { NodeType } from "../../Constants/collections";
+import {
+  COLLECTION_ROOT_NODE_TEXT,
+  NodeType,
+} from "../../Constants/collections";
 import { CollectionModel } from "../../store/CollectionModels/CollectionModel";
 
 import "./styles.css";
@@ -12,12 +15,15 @@ interface CollectionsProps {
   selectedTab: string;
 }
 
-//TODO: MOBX Didn't configured properly used dom elements for achieving functioanlity
-//TODO: Code need to be refactored as it is not in accordance with code guidelines
+//TODO: MOBX Didn't configured properly used dom elements for achieving infinite creation of node functionality
+//TODO: Code need to be refactored in this file as it is not in accordance with code guidelines
 
 export const Collections = observer((props: CollectionsProps) => {
   const { selectedTab } = props;
-  const collectionModel = new CollectionModel("DFIN", "CONTAINER_NODE_TYPE");
+  const collectionModel = new CollectionModel(
+    COLLECTION_ROOT_NODE_TEXT,
+    NodeType.ContainerNode
+  );
   let currentNode = React.useRef<CollectionModel | undefined>();
   let localValue = localStorage.getItem("collections");
   let valueObject = localValue ? JSON.parse(localValue) : undefined;
