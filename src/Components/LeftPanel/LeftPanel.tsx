@@ -14,13 +14,25 @@ export const LeftPanel = (props: LeftPanelProps): React.ReactElement => {
       case CollectionsTabListEnum.All:
         return <Collections selectedTab={selectedTab} />;
       case CollectionsTabListEnum.Graph:
-        return <p>graph</p>;
+        return (
+          <div className="tab-container-class-name">
+            ...GRAPH..Coming Soon...
+          </div>
+        );
       case CollectionsTabListEnum.Recent:
-        return <p>recent</p>;
+        return (
+          <div className="tab-container-class-name">
+            ...RECENT..Coming Soon...
+          </div>
+        );
       case CollectionsTabListEnum.Board:
-        return <p>Board</p>;
+        return (
+          <div className="tab-container-class-name">
+            ...BOARD..Coming Soon...
+          </div>
+        );
       default:
-        return <>Empty</>;
+        return <>...Coming Soon...</>;
     }
   };
 
