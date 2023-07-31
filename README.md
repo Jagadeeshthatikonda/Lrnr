@@ -1,8 +1,7 @@
 # Assignment - Lrnr
 
-List of things compromised due to improper configuration.
 
-# **Better things can follow in this assignment**
+# **Better things can follow during project**
 
 Below are the things I generally followed in the previous projects.
 
